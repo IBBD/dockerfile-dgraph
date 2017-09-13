@@ -7,6 +7,11 @@ FROM dgraph/dgraph:v0.7.6
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
+# 生成别名等
+RUN \
+    alias eyegraph=dgraph \
+    && alias eyeloader=dgraphloader
+
 # 终端设置
 # 执行php-fpm时，默认值是dumb，这时在终端操作时可能会出现：terminal is not fully functional
 ENV TERM xterm
@@ -15,4 +20,4 @@ ENV TERM xterm
 VOLUME /var/www
 
 # 工作目录
-WORKDIR /var/www 
+WORKDIR /dgraph
