@@ -8,9 +8,11 @@ FROM dgraph/dgraph:v0.8.2
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 # 生成别名等
+ADD eyegraph.sh /usr/local/bin/eyegraph
 RUN \
-    cp /usr/local/bin/dgraph /usr/local/bin/eyegraph \
-    && cp /usr/local/bin/dgraphloader /usr/local/bin/eyeloader \
+    chmod +x /usr/local/bin/dgraph \
+    && mv /usr/local/bin/dgraph /usr/local/bin/_eyegraph \
+    && mv /usr/local/bin/dgraphloader /usr/local/bin/eyeloader \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # 终端设置
