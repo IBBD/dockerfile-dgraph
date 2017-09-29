@@ -5,7 +5,7 @@
 # Created Time: 2017年09月29日 星期五 11时55分44秒
 
 if [ "$*" = "-version" ]; then
-    dgraph -version|grep version|cut -d: -f2
+    _eyegraph -version|grep version|cut -d: -f2
 else
-    dgraph $*
+    _eyegraph $*
 fi

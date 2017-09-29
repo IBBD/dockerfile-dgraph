@@ -10,7 +10,7 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 # 生成别名等
 ADD eyegraph.sh /usr/local/bin/eyegraph
 RUN \
-    chmod +x /usr/local/bin/dgraph \
+    chmod +x /usr/local/bin/eyegraph \
     && mv /usr/local/bin/dgraph /usr/local/bin/_eyegraph \
     && mv /usr/local/bin/dgraphloader /usr/local/bin/eyeloader \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
@@ -22,8 +22,5 @@ ENV TERM xterm
 # 解决时区问题
 ENV TZ "Asia/Shanghai"
 
-# Define mountable directories.
-VOLUME /var/www
-
 # 工作目录
-WORKDIR /dgraph
+WORKDIR /eyegraph
