@@ -9,8 +9,8 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 # 生成别名等
 RUN \
-    alias eyegraph=dgraph \
-    && alias eyeloader=dgraphloader \
+    echo "alias eyegraph=dgraph" | tee -a /etc/bash.bashrc \
+    && echo "alias eyeloader=dgraphloader" | tee -a /etc/bash.bashrc \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # 终端设置
