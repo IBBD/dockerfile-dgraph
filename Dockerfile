@@ -3,7 +3,7 @@
 #
 
 # Pull base image.
-FROM dgraph/dgraph:v0.8.3
+FROM dgraph/dgraph:v0.9.2
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
