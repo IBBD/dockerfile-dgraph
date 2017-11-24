@@ -19,8 +19,8 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
     #&& cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # v0.9.2
-RUN \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+#RUN \
+    #cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 
 # 终端设置
