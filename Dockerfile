@@ -19,8 +19,13 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
     #&& cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # v0.9.2
-#RUN \
-    #cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN mkdir -p /usr/share/zoneinfo/Asia
+ADD PRC /usr/share/zoneinfo/Asia/Shanghai
+ADD eyegraph.sh /usr/local/bin/eyegraph
+RUN \
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && chmod +x /usr/local/bin/eyegraph \
+    && mv /usr/local/bin/dgraph /usr/local/bin/_eyegraph
 
 
 # 终端设置
