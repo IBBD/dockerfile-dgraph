@@ -3,7 +3,7 @@
 #
 
 # Pull base image.
-FROM dgraph/dgraph:v0.9.4
+FROM dgraph/dgraph:v1.0.1
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
@@ -33,4 +33,4 @@ ENV TERM xterm
 ENV TZ "Asia/Shanghai"
 
 # 工作目录
-WORKDIR /eyegraph
+WORKDIR /dgraph
